@@ -18,7 +18,7 @@
                 event.preventDefault();
                 alert('Form Submitted');
                 form.reset();
-            });
+        });
         </script>   
     </body>
 </html>
