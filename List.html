@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <style>
+        h1{
+            color: rgb(204, 88, 108);
+            
+        }
+        body{
+            background-color: aqua;
+            width: 100em;
+            height: 200em;
+            border-color:black ;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>TO DO LIST</h2>
+    <input type="text" id="inputText" placeholder="Enter text here" height="100px" width="250px"><br>
+    <br>
+    <button onclick="addItem()">Add  Task</button>
+    <button onclick="clearList()">Clear</button>
+    <ol id="itemList"></ul>
+    
+    <script>
+        function addItem() {
+            var input = document.getElementById("inputText");
+            var text = input.value.trim();
+            if (text !== "") {
+                var list = document.getElementById("itemList");
+                var listItem = document.createElement("li");
+                listItem.textContent = text;
+                list.appendChild(listItem);
+                input.value = ""; 
+            }
+        }
+        
+        function clearList() {
+            document.getElementById("itemList").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
